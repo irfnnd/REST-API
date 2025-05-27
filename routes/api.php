@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DosenController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MahasiswaController;
@@ -28,4 +29,5 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::get('/tokens', [AuthController::class, 'tokens']);
     });
     Route::apiResource('data-mahasiswa', MahasiswaController::class);
+    Route::apiResource('data-dosen', DosenController::class);
 });
