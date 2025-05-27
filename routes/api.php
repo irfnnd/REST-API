@@ -27,5 +27,5 @@ Route::middleware('auth:sanctum')->group(function () {
         Route::post('/revoke-all-tokens', [AuthController::class, 'revokeAllTokens']);
         Route::get('/tokens', [AuthController::class, 'tokens']);
     });
-    Route::resource('data-mahasiswa', MahasiswaController::class);
+    Route::apiResource('data-mahasiswa', MahasiswaController::class);
 });
